@@ -1,4 +1,4 @@
-service: albert-aws-serverless-node
+service: albert-c5-serverless-i
 frameworkVersion: '3'
 
 provider:
