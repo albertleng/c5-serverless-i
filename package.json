@@ -15,5 +15,8 @@
     "url": "https://github.com/albertleng/c5-serverless-i/issues"
   },
   "homepage": "https://github.com/albertleng/c5-serverless-i#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "serverless-offline": "^13.3.4"
+  }
 }

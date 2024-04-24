@@ -1,6 +1,7 @@
-# Project Title
+# C5 Serverless I
 
-This is a brief description of what your project is about.
+This project is a simple serverless application that demonstrates how to create a serverless application using the
+Serverless Framework.
 
 ## Getting Started
 
