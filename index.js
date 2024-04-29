@@ -1,4 +1,4 @@
-module.exports.handler = async (event) => {
+module.exports.handlerTwo = async (event) => {
     return {
         statusCode: 200,
         body: JSON.stringify(
@@ -12,7 +12,7 @@ module.exports.handler = async (event) => {
     };
 };
 
-module.exports.postHandler = async (event) => {
+module.exports.postHandlerTwo = async (event) => {
     // Extract the body from the event
     const body = JSON.parse(event.body);
 
