@@ -23,6 +23,19 @@ functions:
       - httpApi:
           path: /albert_post
           method: post
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - AlbertQueue
+              - Arn
+
+
+resources:
+  Resources:
+    AlbertQueue:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "albert-queue"
 
 plugins:
   - serverless-offline
