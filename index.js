@@ -1,4 +1,6 @@
 module.exports.handlerTwo = async (event) => {
+    console.log('GET method')
+    console.log(event)
     return {
         statusCode: 200,
         body: JSON.stringify(
@@ -13,8 +15,15 @@ module.exports.handlerTwo = async (event) => {
 };
 
 module.exports.postHandlerTwo = async (event) => {
+    console.log('POST method')
+    console.log(event)
     // Extract the body from the event
-    const body = JSON.parse(event.body);
+    let body;
+    try {
+        body = JSON.parse(event.body);
+    } catch (error) {
+        console.error('Failed to parse JSON: ', error)
+    }
 
     // Do something with the body
     // For now, just return it in the response
