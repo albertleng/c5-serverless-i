@@ -36,6 +36,10 @@ resources:
       Type: "AWS::SQS::Queue"
       Properties:
         QueueName: "albert-queue"
+    AlbertS3Bucket:
+      Type: "AWS::S3::Bucket"
+      Properties:
+        BucketName: "albert-s3-bucket"
 
 plugins:
   - serverless-offline
