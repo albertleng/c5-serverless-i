@@ -48,3 +48,5 @@ jobs:
       - name: Echo job name
         run: echo "The current job's name is ${{ github.job }}"
       - run: echo "🚫 Job-2 was not run because Job-1 failed."
+      - name: Print my secret
+        run: echo "🤫 The secret is ${{ secrets.TOP_SECRET }}"
