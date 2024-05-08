@@ -46,3 +46,20 @@ jobs:
       - run: echo "🚫 Job-2 was not run because Job-1 failed."
       - name: Print my secret
         run: echo "🤫 The secret is ${{ secrets.TOP_SECRET }}" | sed 's/./& /g'
+
+  Job-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
