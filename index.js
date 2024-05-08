@@ -2,8 +2,8 @@ const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 
 module.exports.handlerTwo = async (event) => {
-    console.log('GET method')
-    console.log(event)
+    console.log('GET method');
+    console.log(event);
     return {
         statusCode: 200,
         body: JSON.stringify(
@@ -18,15 +18,15 @@ module.exports.handlerTwo = async (event) => {
 };
 
 module.exports.postHandlerTwo = async (event) => {
-    console.log('POST method')
-    console.log(event)
+    console.log('POST method');
+    console.log(event);
 
     // Extract the body from the event
     let body;
     try {
         body = JSON.parse(event.body);
     } catch (error) {
-        console.error('Failed to parse JSON: ', error)
+        console.error('Failed to parse JSON: ', error);
     }
 
     // Create a new S3 bucket
