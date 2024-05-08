@@ -17,8 +17,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Simulate error
-        run: exit 1
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Job-2:
     runs-on: ubuntu-latest
